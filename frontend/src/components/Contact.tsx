@@ -161,7 +161,7 @@ const Contact = () => {
               className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-bold bg-[#FF6A00] text-white shadow-lg hover:bg-black transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <Send size={18} />
-              {isSubmitting ? 'Sending...' : 'Send Request'}
+              {isSubmitting ? 'Sending....' : 'Send Request'}
             </motion.button>
             <span className="text-gray-600 text-sm pt-3">
               We'll get back within 1 business day.
