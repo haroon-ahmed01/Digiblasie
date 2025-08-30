@@ -16,7 +16,7 @@ console.log('PORT:', process.env.PORT || 5000);
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:5173',], // Add your frontend URLs
+  origin: ['http://localhost:5173', 'https://digiblasie-client.onrender.com'], // Add your frontend URLs
   credentials: true
 }));
 app.use(express.json({ limit: '10mb' }));
