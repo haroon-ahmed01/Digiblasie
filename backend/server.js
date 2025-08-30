@@ -16,7 +16,7 @@ console.log('PORT:', process.env.PORT || 5000);
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:3001'], // Add your frontend URLs
+  origin: ['http://localhost:5173',], // Add your frontend URLs
   credentials: true
 }));
 app.use(express.json({ limit: '10mb' }));
@@ -445,8 +445,8 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// 404 handler
-app.use('*', (req, res) => {
+// 404 handler - Fixed to avoid path-to-regexp error
+app.use((req, res) => {
   res.status(404).json({ 
     success: false, 
     message: 'Route not found' 
