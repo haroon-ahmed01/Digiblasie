@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, X } from 'lucide-react';
-import Bewise from '../assets/our_video_reels/Bewise.mp4';
-import srk1 from '../assets/our_video_reels/srk1.mp4';
-import srk2 from '../assets/our_video_reels/srk2.mp4';
-import srk3 from '../assets/our_video_reels/srk3.mp4';
-import indiaStores from '../assets/our_video_reels/indiaStores.mp4';
-import VisionExcellence1 from '../assets/our_video_reels/VisionExcellence1.mp4';
-import VisionExcellence2 from '../assets/our_video_reels/VisionExcellence2.mp4';
 import BeWise from '../assets/videothumnail/BeWise.png';
 import IS from '../assets/videothumnail/IS.png';
 import SRKJ from '../assets/videothumnail/SRKJ.png';
 import VE from '../assets/videothumnail/VE.png';
 
+// Cloudinary configuration
+const CLOUDINARY_CLOUD_NAME = 'dg2wuwx8u';
 
+// Helper function to generate Cloudinary video URL
+const getCloudinaryVideoUrl = (publicId: string): string => {
+  return `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/video/upload/q_auto/f_auto/${publicId}.mp4`;
+};
+
+// Note: Using local thumbnails since they weren't uploaded to Cloudinary
 
 const VideoGallery = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
@@ -21,37 +22,37 @@ const VideoGallery = () => {
   const videos = [
     {
       thumbnail: BeWise,
-      videoUrl: Bewise,
+      videoId: 'Bewise_uzf23j',
       title: 'Educational Campaign Video'
     },
     {
       thumbnail: SRKJ,
-      videoUrl: srk1,
+      videoId: 'srk1_a5phkl',
       title: 'Brand Awareness Reel'
     },
     {
       thumbnail: SRKJ,
-      videoUrl: srk2,
+      videoId: 'srk2_fiypzi',
       title: 'Product Showcase Video'
     },
     {
       thumbnail: SRKJ,
-      videoUrl: srk3,
+      videoId: 'srk3_cejhdz',
       title: 'Social Media Campaign'
     },
     {
       thumbnail: IS,
-      videoUrl: indiaStores,
+      videoId: 'IndiaStores_qdqp6c',
       title: 'Client Success Story'
     },
     {
       thumbnail: VE,
-      videoUrl: VisionExcellence1,
+      videoId: 'VisionExcellence1_lwvbp7',
       title: 'Creative Process Reel'
     },
     {
       thumbnail: VE,
-      videoUrl: VisionExcellence2,
+      videoId: 'VisionExcellence2_jxhfsj',
       title: 'Creative Process Reel'
     }
   ];
@@ -79,7 +80,7 @@ const VideoGallery = () => {
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.05, y: -5 }}
                 className="relative cursor-pointer rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
-                onClick={() => setSelectedVideo(video.videoUrl)}
+                onClick={() => setSelectedVideo(getCloudinaryVideoUrl(video.videoId))}
               >
                 <img
                   src={video.thumbnail}
