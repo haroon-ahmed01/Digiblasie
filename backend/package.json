@@ -1,7 +1,7 @@
 {
-  "name": "digiblasie-backend",
+  "name": "DigiBlaise-backend",
   "version": "1.0.0",
-  "description": "Backend for DigiBlasie portfolio contact form",
+  "description": "Backend for DigiBlaise portfolio contact form",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

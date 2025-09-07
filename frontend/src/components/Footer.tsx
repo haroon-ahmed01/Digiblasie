@@ -25,14 +25,14 @@ const Footer = () => {
           >
             <img 
               src={logo}
-              alt="DigiBlasie Logo" 
+              alt="DigiBlaise Logo" 
               className="h-8 w-8 rounded-full object-cover"
             />
-            <span className="font-bold tracking-wide text-gray-900">DigiBlasie</span>
+            <span className="font-bold tracking-wide text-gray-900">DigiBlaise</span>
           </motion.div>
           
           <div className="text-sm text-gray-600 font-mono">
-            © {currentYear} Digiblasie
+            © {currentYear} DigiBlaise
           </div>
         </div>
       </div>

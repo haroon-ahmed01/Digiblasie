@@ -1,4 +1,4 @@
-# DigiBlasie Backend Setup
+# DigiBlaise Backend Setup
 
 ## Prerequisites
 - Node.js installed
@@ -31,5 +31,5 @@
 ## Features
 - Saves contact submissions to MongoDB
 - Sends thank you email to client
-- Sends notification email to DigiBlasie team
+- Sends notification email to DigiBlaise team
 - CORS enabled for frontend integration

@@ -19,7 +19,7 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
             >
-              Where Creativity Meets Strategy – Welcome to Digiblasie
+              Where Creativity Meets Strategy – Welcome to DigiBlaise
             </motion.span>
             
             <motion.h1 
@@ -41,7 +41,7 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
             >
-              DigiBlasie blends confidence, dedication, and unique ideas to deliver futuristic marketing across social, search, and brand experiences.
+              DigiBlaise blends confidence, dedication, and unique ideas to deliver futuristic marketing across social, search, and brand experiences.
             </motion.p>
             
             <motion.div 

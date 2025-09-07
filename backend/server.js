@@ -16,7 +16,7 @@ console.log('PORT:', process.env.PORT || 5000);
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://digiblasie-client.onrender.com'], // Add your frontend URLs
+  origin: ['http://localhost:5173', 'https://DigiBlaise-client.onrender.com'], // Add your frontend URLs
   credentials: true
 }));
 app.use(express.json({ limit: '10mb' }));
@@ -166,18 +166,18 @@ app.post('/api/contact', async (req, res) => {
         const clientMailOptions = {
           from: process.env.GMAIL_USER,
           to: email,
-          subject: 'Thank you for your inquiry - DigiBlasie',
+          subject: 'Thank you for your inquiry - DigiBlaise',
           html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff;">
               <div style="text-align: center; margin-bottom: 30px;">
-                <h1 style="color: #FF6A00; margin: 0; font-size: 24px; font-weight: bold;">DigiBlasie</h1>
+                <h1 style="color: #FF6A00; margin: 0; font-size: 24px; font-weight: bold;">DigiBlaise</h1>
               </div>
               
               <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 30px; border-radius: 15px; margin-bottom: 20px;">
                 <h2 style="color: #333; margin: 0 0 15px 0; font-size: 20px;">Thank you for your inquiry!</h2>
                 <p style="color: #555; margin: 0 0 15px 0; line-height: 1.6;">Hi ${name},</p>
                 <p style="color: #555; margin: 0 0 15px 0; line-height: 1.6;">
-                  Thank you for reaching out to DigiBlasie! We've received your inquiry and our team is excited to learn more about your project.
+                  Thank you for reaching out to DigiBlaise! We've received your inquiry and our team is excited to learn more about your project.
                 </p>
                 <p style="color: #555; margin: 0 0 15px 0; line-height: 1.6;">
                   We'll review your message and get back to you within 1 business day with a detailed response and next steps.
@@ -194,7 +194,7 @@ app.post('/api/contact', async (req, res) => {
               <div style="text-align: center; padding: 20px 0; border-top: 1px solid #eee;">
                 <p style="color: #666; margin: 0; font-size: 14px;">
                   Best regards,<br>
-                  <strong style="color: #FF6A00;">The DigiBlasie Team</strong>
+                  <strong style="color: #FF6A00;">The DigiBlaise Team</strong>
                 </p>
               </div>
             </div>
@@ -205,7 +205,7 @@ app.post('/api/contact', async (req, res) => {
         const notificationMailOptions = {
           from: process.env.GMAIL_USER,
           to: process.env.GMAIL_USER,
-          subject: `🚀 New Contact Request from ${name} - DigiBlasie`,
+          subject: `🚀 New Contact Request from ${name} - DigiBlaise`,
           html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff;">
               <div style="text-align: center; margin-bottom: 30px;">
@@ -391,7 +391,7 @@ app.post('/api/test-email', async (req, res) => {
     const testMailOptions = {
       from: process.env.GMAIL_USER,
       to: process.env.GMAIL_USER,
-      subject: '✅ DigiBlasie Email Test',
+      subject: '✅ DigiBlaise Email Test',
       html: `
         <div style="font-family: Arial, sans-serif; padding: 20px;">
           <h2 style="color: #FF6A00;">Email Test Successful!</h2>
@@ -478,7 +478,7 @@ process.on('SIGINT', async () => {
 // Start server
 app.listen(PORT, () => {
   console.log('\n' + '='.repeat(50));
-  console.log(`🚀 DigiBlasie Server Started`);
+  console.log(`🚀 DigiBlaise Server Started`);
   console.log(`📍 Port: ${PORT}`);
   console.log(`🌐 Health check: http://localhost:${PORT}/api/health`);
   console.log(`📧 Contact API: http://localhost:${PORT}/api/contact`);

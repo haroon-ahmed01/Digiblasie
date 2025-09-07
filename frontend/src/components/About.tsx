@@ -46,7 +46,7 @@ const About = () => {
           viewport={{ once: true }}
           className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-8"
         >
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 m-0">About DigiBlasie</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 m-0">About DigiBlaise</h2>
           <p className="text-gray-600">Confidence · Dedication · Unique Ideas · Futuristic Work</p>
         </motion.div>
         

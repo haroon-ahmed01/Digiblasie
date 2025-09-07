@@ -41,11 +41,11 @@ const Header = () => {
           >
             <img 
               src={logo}
-              alt="DigiBlasie Logo" 
+              alt="DigiBlaise Logo" 
               className="h-16 w-16 rounded-full object-cover"
             />
             <span className="text-lg font-extrabold tracking-wide text-gray-900">
-              DigiBlasie
+              DigiBlaise
             </span>
           </motion.div>
 
